@@ -6,7 +6,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: thecodingmachine/deeployer:master
+  image: docker://thecodingmachine/deeployer:master
   args:
     - kubectl
     - delete

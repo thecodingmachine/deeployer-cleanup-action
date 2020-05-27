@@ -8,9 +8,9 @@ runs:
   using: 'docker'
   image: docker://thecodingmachine/deeployer:latest
   args:
-    - kubectl
+    - deeployer-k8s
     - delete
-    - namespace
+    - "--namespace"
     - ${{ inputs.namespace }}
 
 branding:

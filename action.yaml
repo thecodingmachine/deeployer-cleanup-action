@@ -1,0 +1,18 @@
+name: 'Delete a Kubernetes namespace'
+description: 'Delete a complete Kubernetes namespace. Useful for cleanup actions'
+inputs:
+  namespace:
+    description: 'Kubernetes namespace to delete'
+    required: true
+runs:
+  using: 'docker'
+  image: thecodingmachine/deeployer:master
+  args:
+    - kubectl
+    - delete
+    - namespace
+    - ${{ inputs.namespace }}
+
+branding:
+  icon: 'cloud'
+  color: 'red'
